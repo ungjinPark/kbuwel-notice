@@ -7,6 +7,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-article: 255, 255, 255;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -44,7 +45,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-
+    --background-article: 34, 34, 34;
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
@@ -106,4 +107,9 @@ a {
     color-scheme: dark;
   }
 }
-header{ margin-bottom:1em; padding: 0.25em; padding-left:1em;}
+header{ margin-bottom:1em; padding: 0.25em; padding-left:1em; display: flex; font-size:1.2em; align-items: center;}
+header li{list-style: none;}
+header nav {margin-left: auto;}
+article {background-color: rgba(var(--background-article),1); margin: 1em;}
+article li {list-style:auto;}
+article :is(li,p,dt,dd) {margin:0.6em 0; line-height: 1.1em;}
